@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://UI/Menu.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/grill.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/grill - Copy (2).jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/grill - Copy.jpg" type="Texture" id=6]
 
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
@@ -90,8 +93,40 @@ font_data = ExtResource( 3 )
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 292, 109 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 292, 109 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -122,9 +157,12 @@ __meta__ = {
 margin_right = 576.0
 margin_bottom = 512.0
 custom_fonts/font = SubResource( 3 )
-text = "Welcome to Fruits of Labor"
+text = "BBQ in the Sky"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Button" parent="."]
 margin_left = 238.0
@@ -132,6 +170,10 @@ margin_top = 512.0
 margin_right = 338.0
 margin_bottom = 552.0
 custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 8 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -143,6 +185,10 @@ margin_top = 562.0
 margin_right = 338.0
 margin_bottom = 602.0
 custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 9 )
 text = "Quit"
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]

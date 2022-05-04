@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Assets/Jellee-Bold.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Assets/background_game.png" type="Texture" id=6]
 [ext_resource path="res://Assets/noise.tres" type="Texture" id=7]
+[ext_resource path="res://Assets/Lips Emoji.png" type="Texture" id=8]
+[ext_resource path="res://Assets/eye.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Slotted_Spatula_PNG_Clipart-715.png" type="Texture" id=10]
 
 [sub_resource type="VisualShaderNodeScalarFunc" id=3]
 function = 1
@@ -195,3 +198,22 @@ __meta__ = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 15 )
+
+[node name="Eye1" type="Sprite" parent="."]
+position = Vector2( 404, 80 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="Eye2" type="Sprite" parent="."]
+position = Vector2( 141, 79 )
+texture = ExtResource( 9 )
+
+[node name="Lips" type="Sprite" parent="."]
+position = Vector2( 273, 84 )
+scale = Vector2( 0.2125, 0.175 )
+texture = ExtResource( 8 )
+
+[node name="Spatula" type="Sprite" parent="."]
+position = Vector2( 509.406, 86.3344 )
+scale = Vector2( 0.045925, 0.0411424 )
+texture = ExtResource( 10 )

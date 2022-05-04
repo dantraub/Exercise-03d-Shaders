@@ -85,7 +85,7 @@ shader = SubResource( 7 )
 shader_param/brighter_color = Color( 1, 0.8, 0, 1 )
 shader_param/middle_color = Color( 1, 0.56, 0, 1 )
 shader_param/darker_color = Color( 0.64, 0.2, 0.05, 1 )
-shader_param/spread = 0.6
+shader_param/spread = 0.384
 shader_param/noise_tex = SubResource( 11 )
 shader_param/gradient_tex = SubResource( 9 )
 
