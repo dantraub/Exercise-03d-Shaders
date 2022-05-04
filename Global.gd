@@ -27,3 +27,6 @@ func _unhandled_input(event):
 func change_score(s):
 	score += s
 	emit_signal("changed")
+	if score >= 500:
+		var _target = get_tree().change_scene("res://End.tscn")
+	
